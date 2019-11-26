@@ -17,12 +17,11 @@ global class CheckIsDeliveryDateExpired implements Database.Batchable<sObject>, 
         update scope;
     }    
     global void finish(Database.BatchableContext bc) {
-    AsyncApexJob job = [SELECT Id, Status, CompletedDate, JobItemsProcessed, TotalJobItems, CreatedBy.Email FROM AsyncApexJob WHERE Id = :bc.getJobId()];
-    String message = 'Dear, ' + UserInfo.getName() + ' ' + recordsProcessed + ' orders with an expired delivery time were processed at the ' + job.CompletedDate;
+    AsyncApexJob job = [SELECT Id, Status, CompletedDate FROM AsyncApexJob WHERE Id = :bc.getJobId()];
+    User currentUser = [SELECT Id, Name, Email FROM User WHERE Id =: UserInfo.getUserId() LIMIT 1];
     Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
-        email.setToAddresses(UserInfo.getUserEmail());
-        email.setPlainTextBody(message);
-        Messaging.sendEmail(email);
-
-}    
+		email.setToAddresses(new List<String>{currentUser.Email});
+		email.setPlainTextBody('Dear ' + currentUser.Name + ' ' + recordsProcessed + 'orders with an expired delivery time were processed at the ' + job.CompletedDate);
+		Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});
+	}
 }
