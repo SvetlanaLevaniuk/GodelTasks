@@ -1,8 +1,8 @@
-global class CheckIsDeliveryDateExpired implements Database.Batchable<sObject>, Database.Stateful {
+global class CheckingDeliveryDateBatch implements Database.Batchable<sObject>, Database.Stateful {
     global Integer recordsProcessed = 0;
     global Database.QueryLocator start(Database.BatchableContext bc) {
         return Database.getQueryLocator(
-            'SELECT Id, DeliveryDate__c, Expired__c, CreatedById ' +
+            'SELECT Id, DeliveryDate__c, Expired__c ' +
             'FROM DeliveryOrder__c ' 
         );
     }
