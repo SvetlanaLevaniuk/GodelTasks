@@ -7,6 +7,7 @@ public static List<DeliveryOrder__c> createNewOrders(Integer count) {
             orders.add(new DeliveryOrder__c (Name = 'test' + i, DeliveryDate__c = Date.today() - 2, Expired__c = false));
         }
         insert orders;
+        return orders;
 }
 
 
