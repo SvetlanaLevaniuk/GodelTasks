@@ -1,5 +1,4 @@
 global class CheckingDeliveryDateBatch implements Database.Batchable<sObject> {
-    global Integer recordsProcessed = 0;
     global Database.QueryLocator start(Database.BatchableContext bc) {
         return Database.getQueryLocator(
             'SELECT ' + 
