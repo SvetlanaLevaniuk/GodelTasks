@@ -14,9 +14,9 @@ public with sharing class CheckingDeliveryDateBatchTest {
     
     @isTest
     public static void checkDeliveryDateBatch() {
-        test.startTest();
+        Test.startTest();
         Id batchId = Database.executeBatch(new CheckingDeliveryDateBatch());
-        test.stopTest();
+        Test.stopTest();
         List<DeliveryOrder__c> ordersAfterChecking = [
             SELECT
             	Id,

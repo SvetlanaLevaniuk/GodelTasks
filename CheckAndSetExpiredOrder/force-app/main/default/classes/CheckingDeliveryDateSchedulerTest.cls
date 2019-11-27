@@ -10,9 +10,9 @@ public with sharing class CheckingDeliveryDateSchedulerTest {
             WHERE JobType = 'ScheduledApex'
         ];
         System.assertEquals(0, jobsScheduled.size());
-        test.startTest();
+        Test.startTest();
         System.schedule('ScheduledApexTest', '0 0 0 1/1 * ? *', new CheckingDeliveryDateScheduler());
-        test.stopTest();
+        Test.stopTest();
         jobsScheduled = [
             SELECT 
                 Id,
