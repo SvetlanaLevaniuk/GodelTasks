@@ -22,8 +22,8 @@ global class CheckingDeliveryDateBatch implements Database.Batchable<sObject> {
         AsyncApexJob job = [
             SELECT 
                 Id, 
-                CompletedDate,
-                recordsProcessed 
+                CompletedDate, 
+                JobItemsProcessed 
             FROM AsyncApexJob 
             WHERE Id = :bc.getJobId()
         ];
@@ -38,7 +38,7 @@ global class CheckingDeliveryDateBatch implements Database.Batchable<sObject> {
         ];
         Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
         email.setToAddresses(new List<String>{currentUser.Email});
-        email.setPlainTextBody('Dear ' + currentUser.Name + ' ' + job.recordsProcessed + 
+        email.setPlainTextBody('Dear ' + currentUser.Name + ' ' + job.JobItemsProcessed + 
             ' orders with an expired delivery time were processed at the ' + 
             job.CompletedDate);
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});
