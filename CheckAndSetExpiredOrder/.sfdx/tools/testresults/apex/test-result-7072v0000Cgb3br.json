@@ -1,0 +1,46 @@
+{
+    "summary": {
+        "outcome": "Passed",
+        "testsRan": 1,
+        "passing": 1,
+        "failing": 0,
+        "skipped": 0,
+        "passRate": "100%",
+        "failRate": "0%",
+        "testStartTime": "Nov 27, 2019 1:50 PM",
+        "testExecutionTime": "1946 ms",
+        "testTotalTime": "1946 ms",
+        "commandTime": "14927 ms",
+        "hostname": "https://ap15.salesforce.com",
+        "orgId": "00D2v0000028edEEAQ",
+        "username": "levaniuk@testgodel.com",
+        "testRunId": "7072v0000Cgb3br",
+        "userId": "0052v00000cq6lQAAQ"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v47.0/tooling/sobjects/ApexTestResult/07M2v000007mDC9EAM"
+            },
+            "Id": "07M2v000007mDC9EAM",
+            "QueueItemId": "7092v000000qggCAAQ",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7072v0000Cgb3brAQA",
+            "MethodName": "checkDeliveryDateBatch",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v47.0/tooling/sobjects/ApexClass/01p2v00000QU7G9AAL"
+                },
+                "Id": "01p2v00000QU7G9AAL",
+                "Name": "CheckingDeliveryDateBatchTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 1946,
+            "FullName": "CheckingDeliveryDateBatchTest.checkDeliveryDateBatch"
+        }
+    ]
+}
