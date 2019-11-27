@@ -1,0 +1,33 @@
+=== Test Reports
+FORMAT  FILE
+──────  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+txt     d:\salesforce task\tasks\CheckAndSetExpiredOrder\.sfdx\tools\testresults\apex\test-result.txt
+txt     d:\salesforce task\tasks\CheckAndSetExpiredOrder\.sfdx\tools\testresults\apex\test-run-id.txt
+junit   d:\salesforce task\tasks\CheckAndSetExpiredOrder\.sfdx\tools\testresults\apex\test-result-7072v0000Cgb14o-junit.xml
+json    d:\salesforce task\tasks\CheckAndSetExpiredOrder\.sfdx\tools\testresults\apex\test-result-7072v0000Cgb14o.json
+
+=== Test Results
+TEST NAME                                                     OUTCOME  MESSAGE  RUNTIME (MS)
+────────────────────────────────────────────────────────────  ───────  ───────  ────────────
+CheckingDeliveryDateSchedulerTest.checkDeliveryDateScheduler  Pass              344
+
+=== Test Summary
+NAME                 VALUE
+───────────────────  ────────────────────────────
+Outcome              Passed
+Tests Ran            1
+Passing              1
+Failing              0
+Skipped              0
+Pass Rate            100%
+Fail Rate            0%
+Test Start Time      Nov 27, 2019 1:34 PM
+Test Execution Time  344 ms
+Test Total Time      344 ms
+Command Time         15781 ms
+Hostname             https://ap15.salesforce.com
+Org Id               00D2v0000028edEEAQ
+Username             levaniuk@testgodel.com
+Test Run Id          7072v0000Cgb14o
+User Id              0052v00000cq6lQAAQ
+
