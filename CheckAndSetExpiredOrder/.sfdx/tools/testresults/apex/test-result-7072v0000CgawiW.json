@@ -1,0 +1,46 @@
+{
+    "summary": {
+        "outcome": "Passed",
+        "testsRan": 1,
+        "passing": 1,
+        "failing": 0,
+        "skipped": 0,
+        "passRate": "100%",
+        "failRate": "0%",
+        "testStartTime": "Nov 27, 2019 1:01 PM",
+        "testExecutionTime": "288 ms",
+        "testTotalTime": "288 ms",
+        "commandTime": "14507 ms",
+        "hostname": "https://ap15.salesforce.com",
+        "orgId": "00D2v0000028edEEAQ",
+        "username": "levaniuk@testgodel.com",
+        "testRunId": "7072v0000CgawiW",
+        "userId": "0052v00000cq6lQAAQ"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v47.0/tooling/sobjects/ApexTestResult/07M2v000007mCqwEAE"
+            },
+            "Id": "07M2v000007mCqwEAE",
+            "QueueItemId": "7092v000000qgeRAAQ",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7072v0000CgawiWAQQ",
+            "MethodName": "checkDeliveryDateScheduler",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v47.0/tooling/sobjects/ApexClass/01p2v00000QU3PeAAL"
+                },
+                "Id": "01p2v00000QU3PeAAL",
+                "Name": "CheckingDeliveryDateSchedulerTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 288,
+            "FullName": "CheckingDeliveryDateSchedulerTest.checkDeliveryDateScheduler"
+        }
+    ]
+}

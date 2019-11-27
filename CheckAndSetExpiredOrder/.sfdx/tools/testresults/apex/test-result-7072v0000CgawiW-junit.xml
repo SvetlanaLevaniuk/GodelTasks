@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2019-11-27T13:01:57+03:00" hostname="https://ap15.salesforce.com" tests="1" failures="0"  errors="0"  time="0.29">
+        <properties>
+            <property name="outcome" value="Passed"/>
+            <property name="testsRan" value="1"/>
+            <property name="passing" value="1"/>
+            <property name="failing" value="0"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="100%"/>
+            <property name="failRate" value="0%"/>
+            <property name="testStartTime" value="Nov 27, 2019 1:01 PM"/>
+            <property name="testExecutionTime" value="0.29 s"/>
+            <property name="testTotalTime" value="0.29 s"/>
+            <property name="commandTime" value="14.51 s"/>
+            <property name="hostname" value="https://ap15.salesforce.com"/>
+            <property name="orgId" value="00D2v0000028edEEAQ"/>
+            <property name="username" value="levaniuk@testgodel.com"/>
+            <property name="testRunId" value="7072v0000CgawiW"/>
+            <property name="userId" value="0052v00000cq6lQAAQ"/>
+        </properties>
+        <testcase name="checkDeliveryDateScheduler" classname="CheckingDeliveryDateSchedulerTest" time="0.29">
+        </testcase>
+    </testsuite>
+</testsuites>
