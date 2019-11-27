@@ -1,7 +1,7 @@
 @isTest
 public with sharing class CheckingDeliveryDateBatchTest {
 
-    public static Integer COUNT = 202;
+    public static Integer COUNT = 200;
     
     @TestSetup
     public static void createNewOrders() {
@@ -24,6 +24,6 @@ public with sharing class CheckingDeliveryDateBatchTest {
             FROM DeliveryOrder__c 
             WHERE Expired__c = true
         ];
-        System.assertEquals(202, ordersAfterChecking.size());
+        System.assertEquals(COUNT, ordersAfterChecking.size());
     }
 }
