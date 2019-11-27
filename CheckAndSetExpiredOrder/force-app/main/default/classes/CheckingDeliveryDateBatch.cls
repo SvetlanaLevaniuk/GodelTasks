@@ -37,8 +37,8 @@ global class CheckingDeliveryDateBatch implements Database.Batchable<sObject>, D
         Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
             email.setToAddresses(new List<String>{currentUser.Email});
             email.setPlainTextBody('Dear ' + currentUser.Name + ' ' + recordsProcessed + 
-                                   ' orders with an expired delivery time were processed at the ' + 
-                                   job.CompletedDate);
+                ' orders with an expired delivery time were processed at the ' + 
+                job.CompletedDate);
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});
     }
 }
