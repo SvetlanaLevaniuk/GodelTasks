@@ -8,7 +8,4 @@ trigger DeliveryOrderTrigger on DeliveryOrder__c (before insert, before update, 
             DeliveryOrderTriggerHelper.handlerBeforeUpdate(Trigger.new, Trigger.old);
         }
     }
-    if (Trigger.isAfter) {
-        DeliveryOrderTriggerHelper.handlerAfterInsert(Trigger.new);
-    }
 }
