@@ -14,37 +14,31 @@ public with sharing class DeliveryOrderTriggerHelper {
     } 
     
     public static void handlerAfterInsert(List<DeliveryOrder__c> newOrders) {
+        List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
         EmailTemplate emailTemplate = [
-            Select 
-            Id,
-            Subject,
-            Description,
-            HtmlValue,
-            DeveloperName,
-            Body 
-            FROM EmailTemplate 
-            WHERE Name LIKE 'OrderInfoEmail'
-        ];
-        User currentUser = [
             SELECT 
-            Id, 
-            Name, 
-            Email 
-            FROM User 
-            WHERE Id =: UserInfo.getUserId() 
-            LIMIT 1
+                Id,
+                Subject,
+                Description,
+                HtmlValue,
+                DeveloperName,
+                Body 
+            FROM EmailTemplate 
+            WHERE Name = 'OrderInfoEmail'
         ];
-        for (DeliveryOrder__c order : newOrders) {
+        for (DeliveryOrder__c order : newOrders) {            
             if (order.TypeOfDelivery__c != null) {
                 Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
-                email.setTargetObjectId(currentUser.Id);
-                email.setToAddresses(new List<String>{currentUser.Email});
+                email.setTargetObjectId(UserInfo.getUserId());
                 email.setUseSignature(false); 
                 email.setBccSender(false); 
                 email.setSaveAsActivity(false);
                 email.setTemplateId(emailTemplate.Id);
                 email.setWhatId(order.Id);
-                Messaging.sendEmail(new Messaging.SingleEmailMessage[] {email});
+                emails.add(email);
+            }
+            if (emails.size() > 0) {
+                Messaging.sendEmail(emails);
             }
         }
     }
