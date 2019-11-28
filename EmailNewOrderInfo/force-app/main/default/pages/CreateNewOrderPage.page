@@ -1,0 +1,29 @@
+<apex:page controller="CreateNewOrderPageController" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock >
+            <h2 align="center">
+                {!$Label.Create_new_order}
+            </h2>
+             <apex:pageMessage severity="ERROR" rendered="{!showErrorMessage}" summary="WARNING! {!errorMessage}" />
+            <apex:pageBlockSection columns="1" id="forms">
+                <apex:inputField label="Order name" value="{! newOrder.Name }" style="width: 300px;"/>
+                <apex:selectList label="Choose type of delivery:" value="{!newOrder.TypeOfDelivery__c}" size="1" style="width: 300px;">
+                    <apex:selectOptions value="{!typeOfDelivery}"/>
+                </apex:selectList>
+                <apex:inputField label="Overall weight" value="{! newOrder.OverallWeight__c }" style="width: 300px;"/>        
+                <apex:inputField label="Date of delivery" value="{! newOrder.DeliveryDate__c}" style="width: 300px;"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.Cancel}" action="{!redirectPopup}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;" />
+                <apex:commandButton value="{!$Label.Save}" action="{!insertNewProductTable}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <style type="text/css">
+        label {
+        color: #6495ED;
+        font-weight: bold;
+        font-size: 13pt;
+        }
+    </style>
+</apex:page>

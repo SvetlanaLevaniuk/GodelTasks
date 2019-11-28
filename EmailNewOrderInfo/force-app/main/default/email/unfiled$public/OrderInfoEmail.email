@@ -1,0 +1,27 @@
+<messaging:emailTemplate subject="Delivery order" recipientType="User" relatedToType="DeliveryOrder__c">
+    <messaging:htmlEmailBody >
+        <html>
+            <body>
+                <p>Dear <b>{!recipient.Name}</b>,</p>
+                <p>Thank you for choosing our services. Here is the information about your order <b>{!relatedTo.name}</b></p>
+                <table style="width: 80%; border: 1px solid black; border-collapse: collapse; text-align: center;">
+                    <tr style="border: 1px solid black;">
+                        <th>Delivery type</th>
+                        <th>Owerall weigh</th>
+                        <th>Total cost</th>
+                        <th>Delivery date</th>
+                    </tr>
+                    <apex:repeat var="order" value="{!relatedTo}">
+                        <tr style="border: 1px solid black;">
+                            <td style="text-align: left; padding-left: 15px;">{!order.TypeOfDelivery__r.Name}</td>
+                            <td>{!order.OverallWeight__c}</td>
+                            <td>{!order.TotalDeliveryCost__c}</td>
+                            <td>{!order.DeliveryDate__c}</td>
+                        </tr>
+                    </apex:repeat>
+                </table>    
+                <apex:image url="https://peredmistia.com.ua/wp-content/uploads/2016/02/yartrans-content_transport.png"  width="80%" alt="cool truck" style="margin-top: 2%"/>
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

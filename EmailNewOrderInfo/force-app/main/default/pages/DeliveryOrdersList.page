@@ -1,0 +1,111 @@
+<apex:page controller="DeliveryOrderController" lightningStylesheets="true" sidebar="false">
+    <apex:form id="form"> 
+        <apex:actionStatus id="actStatusId">
+            <apex:facet name="start" >
+                <apex:outputPanel >
+                    <img src="/img/loading32.gif"/>
+                </apex:outputPanel>            
+            </apex:facet>
+        </apex:actionStatus>
+        <apex:pageBlock id="orders_list">
+            <h2 align="center">
+                {!$Label.DELIVERY_ORDERS}
+            </h2>
+            <apex:pageMessages rendered="{!(!displayPopup)}"/>
+            <table style="margin: 15px 0">
+                <tr>
+                    <td>
+                        <apex:inputText value="{!searchStr}"/>
+                    </td>
+                    <td>
+                        <apex:commandButton value="{!$Label.Search}" action="{!viewSortedList}" reRender="orders_list" status="actStatusId" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue; margin: 0 7px"/>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageBlockTable value="{!wrappers}" var="order" style="border-style:solid;border-width:2px;border-color:#6495ED; "
+                                 columnClasses="column">
+                <apex:column > 
+                    <apex:facet name="header">
+                        <apex:inputCheckbox value="{!allBool}" style="margin-left: 10px;" >
+                            <apex:actionSupport reRender="orders_list" action="{!selectAll}" event="onchange"/>
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!order.checked}" style="margin-left: 10px;" />
+                </apex:column>
+                <apex:column value="{!order.wrapOrder.Name }">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!viewSortedList}" reRender="orders_list" value="{!$Label.Delivery_order}{!IF(sortExpression=='Name',IF(sortDirection='ASC','▼','▲'),'')}" style="color:#6495ED; font-weight:bold;">
+                            <apex:param value="Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!order.wrapOrder.TypeOfDelivery__r.Name }">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!viewSortedList}" reRender="orders_list" value="{!$Label.Type_of_delivery}{!IF(sortExpression=='TypeOfDelivery__r.Name',IF(sortDirection='ASC','▼','▲'),'')}" style="color:#6495ED; font-weight:bold;">
+                            <apex:param value="TypeOfDelivery__r.Name" name="column" assignTo="{!sortExpression}" ></apex:param>
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!order.wrapOrder.OverallWeight__c }">
+                    <apex:facet name="header">
+                        <apex:outputText value="{!$Label.Owerall_weight_header}" style="color:#6495ED; font-weight:bold;"/>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!order.wrapOrder.TotalDeliveryCost__c }">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!viewSortedList}" reRender="orders_list" value="{!$Label.Total_delivery_cost}{!IF(sortExpression=='TotalDeliveryCost__c',IF(sortDirection='ASC','▼','▲'),'')}" style="color:#6495ED; font-weight:bold;">
+                            <apex:param value="TotalDeliveryCost__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column>
+                <apex:column value="{!order.wrapOrder.DeliveryDate__c }">
+                    <apex:facet name="header">
+                        <apex:commandLink action="{!viewSortedList}" reRender="orders_list" value="{!$Label.Delivery_date}{!IF(sortExpression=='DeliveryDate__c',IF(sortDirection='ASC','▼','▲'),'')}" style="color:#6495ED; font-weight:bold;">
+                            <apex:param value="DeliveryDate__c" name="column" assignTo="{!sortExpression}" ></apex:param>
+                        </apex:commandLink>
+                    </apex:facet>
+                </apex:column> 
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.New_order}"  action="{!showPopup}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;"/>
+                <apex:commandButton value="{!$Label.Delete}" action="{!deleteSelectedOrders}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;" status="actStatusId" reRender="orders_list"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock> 
+    </apex:form> 
+    <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopup}" >
+        <apex:include pageName="CreateNewOrderPage" /> 
+    </apex:outputPanel> 
+    <style type="text/css">
+        img {
+        display: block;
+        z-index: 999999;
+        height: 6rem;
+        margin: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        }
+        .spinner {
+        background-color: #6495ED;
+        z-index: 100000;
+        }
+        .custPopup{
+        background-color: #6495ED;
+        color: black;
+        border-width: 2px;
+        border-style: solid;
+        z-index: auto;
+        left: 50%;
+        padding:10px;
+        position: absolute;
+        width: 600px;
+        margin-left: -350px;
+        top:100px;
+        h1 {
+        font-weight: bold;
+        color: #6495ED;
+        }
+    </style>
+</apex:page>
