@@ -1,0 +1,35 @@
+<apex:page controller="DeliveryOrderPdfController" renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    <html>
+        <head>
+            <style>
+                @page {
+                size: A4;
+                margin: 20mm;
+                @top-center {
+                content: "{!$Label.DELIVERY_ORDERS}";
+                }
+                @bottom-center {
+                content: "Page " counter(page) " of " counter(pages);
+                }
+                }
+                .page-break {
+                display:block;
+                page-break-after:always;
+                }
+                body {
+                font-family: Arial Unicode MS;
+                }
+                .no-break {
+  page-break-inside: avoid;
+}
+            </style> 
+        </head>
+        <body>
+            <apex:form > 
+                <apex:repeat value="{!usingTypesId}" var="type" id="theRepeat">
+                    <c:OrdersTabelComp TypeId="{!type}"/>
+                </apex:repeat>
+            </apex:form>
+        </body>
+    </html>
+</apex:page>

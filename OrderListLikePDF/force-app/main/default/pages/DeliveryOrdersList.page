@@ -1,0 +1,71 @@
+<apex:page controller="DeliveryOrderController" lightningStylesheets="true" sidebar="false" applyBodyTag="false">
+    <apex:form id="form"> 
+        <apex:actionStatus id="actStatusId">
+            <apex:facet name="start" >
+                <apex:outputPanel >
+                    <img src="/img/loading32.gif"/>
+                </apex:outputPanel>            
+            </apex:facet>
+        </apex:actionStatus>
+        <apex:pageBlock id="orders_list">
+            <h2 align="center">
+                {!$Label.DELIVERY_ORDERS}
+            </h2>
+            <apex:pageMessages rendered="{!(!displayPopup)}"/>
+            <table style="margin: 15px 0">
+                <tr>
+                    <td>
+                        <apex:inputText value="{!searchStr}"/>
+                    </td>
+                    <td>
+                        <apex:commandButton value="{!$Label.Search}" action="{!viewSortedList}" reRender="orders_list" status="actStatusId" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue; margin: 0 7px"/>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageBlockSection columns="1">
+                <c:OrdersTabelComp TypeId="{!null}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="{!$Label.New_order}"  action="{!showPopup}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;"/>
+                <apex:commandButton value="{!$Label.Delete}" action="{!deleteSelectedOrders}" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;" status="actStatusId" reRender="orders_list"/>
+                <apex:commandButton value="{!$Label.Render_as_PDF}" action="/apex/DeliveryOrdersListRenderAsPDF" style="background-color: #6495ED; color: #000066; border-width:2px; border-color:blue;" status="actStatusId"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock> 
+    </apex:form> 
+    <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopup}" >
+        <apex:include pageName="CreateNewOrderPage" /> 
+    </apex:outputPanel> 
+    <style type="text/css">
+        img {
+        display: block;
+        z-index: 999999;
+        height: 6rem;
+        margin: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        }
+        .spinner {
+        background-color: #6495ED;
+        z-index: 100000;
+        }
+        .custPopup{
+        background-color: #6495ED;
+        color: black;
+        border-width: 2px;
+        border-style: solid;
+        z-index: auto;
+        left: 50%;
+        padding:10px;
+        position: absolute;
+        width: 600px;
+        margin-left: -350px;
+        top:100px;
+        h1 {
+        font-weight: bold;
+        color: #6495ED;
+        }
+    </style>
+</apex:page>
