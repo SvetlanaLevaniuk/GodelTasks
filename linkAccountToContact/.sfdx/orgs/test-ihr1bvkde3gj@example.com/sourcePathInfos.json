@@ -1,0 +1,167 @@
+[
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744476,
+            "changeTime": 1575542744476,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744476,
+            "changeTime": 1575542744476,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744477,
+            "changeTime": 1575542744477,
+            "contentHash": "b06ccf9c4a0a855fcb9e06d2acfa15dbcd53cea2",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744476,
+            "changeTime": 1575542744476,
+            "contentHash": "2ebf6b4c7f219ad3bd3a0346c263b5ad27f4a29f",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes\\LinkAccountToContactHendler.cls",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes\\LinkAccountToContactHendler.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 1280,
+            "modifiedTime": 1575542744476,
+            "changeTime": 1575542744476,
+            "contentHash": "15bfc8fd3cc6b9382d87a00302b739625363da9f",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes\\LinkAccountToContactHendler.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\classes\\LinkAccountToContactHendler.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 179,
+            "modifiedTime": 1575542744476,
+            "changeTime": 1575542744476,
+            "contentHash": "f94e19c1ad6631b922c4749063745f08342d80f3",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\lwc",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744477,
+            "changeTime": 1575542744477,
+            "contentHash": "a973ac1b5be0e216b2a2db1b82ae5ba97f4086f4",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744477,
+            "changeTime": 1575542744477,
+            "contentHash": "510772f8aaa803e903c4cdcf04784d624f35e4dd",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers\\ContactTrigger.trigger",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers\\ContactTrigger.trigger",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 305,
+            "modifiedTime": 1575542744477,
+            "changeTime": 1575542744477,
+            "contentHash": "8bc54bad61b2656bb6f73d5d114643da21da9786",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers\\ContactTrigger.trigger-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact\\force-app\\main\\default\\triggers\\ContactTrigger.trigger-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 183,
+            "modifiedTime": 1575542744477,
+            "changeTime": 1575542744477,
+            "contentHash": "43a8f4093252268d781b0fece0825bf773251313",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\linkAccountToContact",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\linkAccountToContact",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744478,
+            "changeTime": 1575542744478,
+            "contentHash": "8499f14caadb26edb7610391b24cea2d696a53e6",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
