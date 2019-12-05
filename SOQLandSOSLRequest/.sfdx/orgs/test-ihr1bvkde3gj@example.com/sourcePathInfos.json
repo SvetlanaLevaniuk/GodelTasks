@@ -1,0 +1,122 @@
+[
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744455,
+            "changeTime": 1575542744455,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744455,
+            "changeTime": 1575542744455,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744456,
+            "changeTime": 1575542744456,
+            "contentHash": "3a255ff489cff7ad29aac5620772096648592233",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744456,
+            "changeTime": 1575542744456,
+            "contentHash": "9c02557834a8d8aee1eeebe4ba695cc84d16b3c0",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes\\SOQLrequestTask.cls",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes\\SOQLrequestTask.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 3558,
+            "modifiedTime": 1575542744455,
+            "changeTime": 1575542744455,
+            "contentHash": "68a516e843e2d1c64c05eaf54964dd8b4acf20e9",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes\\SOQLrequestTask.cls-meta.xml",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\classes\\SOQLrequestTask.cls-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 179,
+            "modifiedTime": 1575542744456,
+            "changeTime": 1575542744456,
+            "contentHash": "f94e19c1ad6631b922c4749063745f08342d80f3",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\lwc",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest\\force-app\\main\\default\\lwc",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744456,
+            "changeTime": 1575542744456,
+            "contentHash": "a973ac1b5be0e216b2a2db1b82ae5ba97f4086f4",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "D:\\GIT\\SOQLandSOSLRequest",
+        {
+            "state": "n",
+            "sourcePath": "D:\\GIT\\SOQLandSOSLRequest",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 0,
+            "modifiedTime": 1575542744456,
+            "changeTime": 1575542744456,
+            "contentHash": "8499f14caadb26edb7610391b24cea2d696a53e6",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ]
+]
