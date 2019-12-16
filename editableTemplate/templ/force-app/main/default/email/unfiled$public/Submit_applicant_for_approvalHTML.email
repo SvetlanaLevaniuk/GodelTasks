@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Пример веб-страницы</title>
+</head>
+<style>
+    th {
+      text-align: left;
+    }
+table {
+        margin: auto;
+    }
+
+</style>
+<body>
+    <table>
+        <tr>
+            <th>
+                Name:
+            </th>
+            <td>
+                {!Lead.Name}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Source:
+            </th>
+            <td>
+                {!Lead.Source__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Start Date:
+            </th>
+            <td>
+                {!Lead.Start_Date__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Title:
+            </th>
+            <td>
+                {!Lead.Title__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Skillset:
+            </th>
+            <td>
+                {!Lead.Skillset__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Years Of Experience:
+            </th>
+            <td>
+                {!Lead.Years_of_experience__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Level of English:
+            </th>
+            <td>
+                {!Lead.English_Level__c}
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Salary:
+            </th>
+            <td>
+                {!Lead.Salary__c}
+            </td>
+        </tr>        
+    </table>
+
+ 
+</body>
+
+</html>

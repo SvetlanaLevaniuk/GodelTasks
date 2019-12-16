@@ -1,0 +1,30 @@
+Name:               {!Lead.Name}
+
+Source: {!Lead.Source__c}
+
+Start Date: {!Lead.Start_Date__c}
+
+Title: {!Lead.Title__c}
+
+Skillset: {!Lead.Skillset__c}
+
+Years Of Experience: {!Lead.Years_of_experience__c}
+
+Level of English: {!Lead.English_Level__c}
+
+Salary: {!Lead.Salary__c}
+
+Comments:
+
+
+
+
+
+Brest regards,
+{!User.FullName}
+HR Manager
+{!Organization.Name}
+Phone mob: +375 29 276 98 77
+Email: {!User.Email}
+
+{!Today}
